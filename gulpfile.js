@@ -126,7 +126,6 @@ gulp.task("css:build", function(){
 ====================================================*/
 gulp.task("css", function(){
     gulp.src(path.src.css)
-        .pipe(less())
         .pipe(sourcemaps.init())
         .pipe(plumber())
         .pipe(less())
@@ -289,7 +288,7 @@ gulp.task("watch", function(){
     watch([path.watch.html], function(event, cb){
         gulp.start("html");
     });
-    watch([path.watch.css], function(event, cb){
+    watch(["src/assets/less/**/*.less"], function(event, cb){
         gulp.start("css");
     });
     watch([path.watch.libs], function(event, cb){

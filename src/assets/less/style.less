@@ -1,12 +1,127 @@
-@import "partials/_start.less";
+@import "../../../bower_components/normalize-less/normalize.less";
+@import (less) "../libs/bootstrap/css/bootstrap.min.css";
+@import "partials/variables.less";
+@import "partials/mixins.less";
+@import "partials/fonts.less";
+
+html,
+body {
+  font-size: 15px;
+}
 
 body {
-  font-size: 18px;
+  font-size: 1rem;
   text-align: center;
-  color: maroon;
-  background: #888;
+  .latoRegular;
+  color: @text-color;
+  background: @white;
 }
 
-.block {
-  border: 1px solid red; 
+h1 {
+  .lato-Heavy;
+  font-size: 2.5em;
 }
+
+h2 {
+  .lato-Heavy;
+  font-size: 2.1em;
+}
+
+ul {
+  margin: 0;
+  list-style-type: none;
+}
+
+a{
+  &:hover,
+  &:active,
+  &:focus{
+    text-decoration: none;
+  }
+}
+
+.btn {
+  display: inline-block;
+  vertical-align: top;
+  padding: 14px 25px;
+  font-size: 1.1em;
+  transition: all .4s ease;
+
+  &.btn__green {
+    color: @accent;
+    background-color: transparent;
+    border: 2px solid @accent;
+    box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+
+    &:hover {
+      color: @white;
+      background-color: @accent;
+    }
+  }
+}
+
+/*header-top
+=======================================*/ 
+.header-top {
+  padding: 30px 0;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.15);
+  
+  /*menu
+  =======================================*/ 
+  .menu {
+    li {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 14px;
+      height: 50px;
+      line-height: 50px;
+    }
+
+    a{
+      display: block;
+      color: inherit;
+      transition: all .4s ease;
+
+      &:hover{
+        text-decoration: none;
+        color: @accent;
+      }
+    }
+  }
+
+  /*header-top_right
+  =======================================*/ 
+  &_right {
+    text-align: right;
+    @media screen and (max-width: @md) {
+       margin-top: 20px;     
+    }    
+  }
+
+  /*phone
+  =======================================*/ 
+  .phone,
+  .request {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .phone {
+    margin-right: 16px;
+    margin-top: -4px;
+    font-weight: bold;
+
+    span {
+      font-weight: normal;
+      color: @accent;
+    }
+  }
+
+  .request {
+    margin-top: -3px;
+  }
+
+}
+
+
