@@ -29,6 +29,7 @@ h2 {
 
 ul {
   margin: 0;
+  padding: 0;
   list-style-type: none;
 }
 
@@ -39,6 +40,15 @@ a{
     text-decoration: none;
   }
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.block{
+  border: 1px solid #666;
+}    
 
 .btn {
   display: inline-block;
@@ -66,20 +76,43 @@ a{
 .header-top {
   padding: 30px 0;
   box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.15);
+
+  .logo {
+    @media screen and (max-width: @lg) {
+       margin-bottom: 30px;       
+    }    
+  }
+
+  .col-xs-8 {
+    @media screen and (max-width: 580px) {
+       width: 100%;       
+    }    
+  }
+
+  .col-xs-4 {
+    @media screen and (max-width: 580px) {
+       width: 100%;      
+    }    
+  }
+
   
   /*menu
   =======================================*/ 
   .menu {
+    @media screen and (max-width: @lg) {
+       text-align: left;     
+    }    
+
     li {
       display: inline-block;
       vertical-align: top;
-      margin-right: 14px;
       height: 50px;
       line-height: 50px;
     }
 
     a{
       display: block;
+      padding: 0 10px;
       color: inherit;
       transition: all .4s ease;
 
@@ -94,9 +127,12 @@ a{
   =======================================*/ 
   &_right {
     text-align: right;
-    @media screen and (max-width: @md) {
-       margin-top: 20px;     
-    }    
+
+    .btn {
+      @media screen and (max-width: 480px) {
+         font-size: .8em;
+      } 
+    }
   }
 
   /*phone
