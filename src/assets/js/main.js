@@ -17,7 +17,19 @@ $(function () {
         fixedBackground: false
       });
 
+    /*colorized input in filters-block
+    =======================================*/ 
+    var filterBlockInput = $('#js-filters-block input');
+
+    filterBlockInput.on('click', function(){
+      if($(this).prop('checked')){
+         $(this).parent('div').css('borderBottomColor', 'green');
+      }else{
+        $(this).parent('div').css('borderBottomColor', '')
+      }
     });
+
+});
 
 
 
