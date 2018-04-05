@@ -1,9 +1,11 @@
 @import "../../../bower_components/normalize-less/normalize.less";
 @import (less) "../libs/bootstrap/css/bootstrap.min.css";
+@import "../libs/slick/slick.less";
 @import "partials/variables.less";
 @import "partials/mixins.less";
 @import "partials/fonts.less";
 @import "partials/icomoon.less";
+
 
 html,
 body {
@@ -564,6 +566,62 @@ img {
   height:100%;
 }
 /*video
+=======================================*/ 
+
+/*slider-index
+=======================================*/ 
+.slider-index {
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+.slider-index-small-wrap {
+  position: relative;
+  margin: 0 auto 60px;
+  max-width: 1170px;
+  cursor: pointer;
+
+  .img-wrap {
+    padding: 0 10px;
+  }
+
+  .slick-right,
+  .slick-left {
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    transform: translateY(-50%);
+    color: #222;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all .4s ease;
+
+    @media screen and (max-width: 790px) {
+       display: none!important;     
+    }    
+
+    &:hover {
+      color: @accent;
+    }
+  }
+
+  .slick-left {
+    left: -30px;
+  }
+
+  .slick-right {
+    right: -30px;
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  .buttons {
+    font-size: 30px;
+    color: red;
+  }
+}
+
+/*slider-index
 =======================================*/ 
 
 

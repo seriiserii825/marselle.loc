@@ -29,6 +29,41 @@ $(function () {
       }
     });
 
+    /*slider-index
+    =======================================*/ 
+    $("#js-slider-index").slick({
+      arrows: false,
+      asNavFor: '#js-slider-index-small' 
+    });
+
+    $("#js-slider-index-small").slick({
+      asNavFor: '#js-slider-index',
+      focusOnSelect: true,
+      arrows: true,
+      prevArrow: $('.slick-left'),
+      nextArrow: $('.slick-right'),
+      responsive: [
+    {
+      breakpoint: 1920,
+      settings: {
+        slidesToShow: 4
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 570,
+      settings: {
+        slidesToShow: 2
+      }
+    }
+  ]
+    });  
+
 });
 
 
