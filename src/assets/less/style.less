@@ -13,6 +13,7 @@ body {
 }
 
 body {
+  padding-bottom: 400px;
   font-size: 1rem;
   .latoRegular;
   color: @text-color;
@@ -407,7 +408,9 @@ img {
 .about {
   padding-top: 60px;
   background-color: #f8f8f8;
-  background: url("../i/about-bg.jpg") no-repeat top right;
+  background-image: url("../i/about-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: top right;
 
   &__content {
     position: relative;
@@ -415,6 +418,10 @@ img {
     @media screen and (max-width: @md) {
        margin-bottom: 40px;     
     } 
+  }
+
+  h2 {
+    margin-top: 0;
   }
 
   &__text {
@@ -624,6 +631,61 @@ img {
 /*slider-index
 =======================================*/ 
 
+/*masterplan
+=======================================*/ 
+.masterplan {
+  .img-wrap {
+    margin-bottom: 60px;
+  }
+  p {
+    .minionProRegular;
+    font-size: 1.2rem;
+    line-height: 25px;
+  }
+}
+/*masterplan
+=======================================*/ 
+
+/*photo
+=======================================*/ 
+.photo{
+  .slick-right,
+  .slick-left {
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    transform: translateY(-50%);
+    color: #222;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all .4s ease;
+
+    @media screen and (max-width: 790px) {
+       display: none!important;     
+    }    
+
+    &:hover {
+      color: @accent;
+    }
+  }
+
+  .slick-left {
+    left: -30px;
+  }
+
+  .slick-right {
+    right: -30px;
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  .buttons {
+    font-size: 30px;
+    color: red;
+  }
+}
+/*photo
+=======================================*/ 
 
 
 

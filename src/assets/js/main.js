@@ -66,5 +66,31 @@ $(function () {
 
 });
 
-
+/*slider-photo
+=======================================*/ 
+$('#js-photo').slick({
+   arrows: true,
+   prevArrow: $('#js-photo .slick-left'),
+   nextArrow: $('#js-photo .slick-right'), 
+   responsive: [
+    {
+      breakpoint: 1920,
+      settings: {
+        slidesToShow: 4
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 570,
+      settings: {
+        slidesToShow: 2
+      }
+    }
+  ]
+});
 
