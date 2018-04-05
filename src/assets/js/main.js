@@ -64,7 +64,7 @@ $(function () {
   ]
     });  
 
-});
+
 
 /*slider-photo
 =======================================*/ 
@@ -92,5 +92,16 @@ $('#js-photo').slick({
       }
     }
   ]
+  });
+
+  /*hypothec tabs
+  =======================================*/ 
+  $("#js-hypothec .tabs__content").not(":first").hide();
+  $("#js-hypothec .tabs__item").click(function() {
+    $("#js-hypothec .tabs__item").removeClass("active").eq($(this).index()).addClass("active");
+    $("#js-hypothec .tabs__content").hide().eq($(this).index()).fadeIn()
+  }).eq(0).addClass("active");
+
+
 });
 

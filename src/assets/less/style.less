@@ -737,8 +737,90 @@ img {
     width: 70px;
     height: 70px;
   }
+
+  .btn {
+    display: table;
+    margin: 0 auto;
+  }
 }
 /*documentation
+=======================================*/ 
+
+/*hypothec
+=======================================*/ 
+.hypothec {
+  h2 {
+    text-align: center;
+  }
+
+  .btn {
+    display: table;
+    margin: 30px auto;
+  }
+
+  .tabs {
+    display: table;
+    margin: 30px auto;
+
+    &__item {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 40px;
+      padding: 16px;
+      font-size: 1.3rem;
+      border-bottom: 2px solid #eee;
+      opacity: .7;
+      transition: all .5s ease;
+      cursor: pointer;
+
+      @media screen and (max-width: 620px) {
+         display: block;     
+      }    
+
+      &:hover {
+        border-bottom-color: @accent;
+        opacity: 1;
+      }
+    }
+  }
+  
+  /*hypothec__text
+  =======================================*/ 
+  .tabs__content {
+    font-size: 1.2rem;
+  }
+
+  /*hypothec__info
+  =======================================*/ 
+  &__info {
+    &-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      padding: 20px;
+      height: 90px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.15);
+    }
+    
+    .icon {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 20px;
+      font-size: 60px;
+      color: @accent;
+    }
+
+    span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+
+}
+/*hypothec
 =======================================*/ 
 
 
