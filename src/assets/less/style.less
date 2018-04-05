@@ -3,6 +3,7 @@
 @import "partials/variables.less";
 @import "partials/mixins.less";
 @import "partials/fonts.less";
+@import "partials/icomoon.less";
 
 html,
 body {
@@ -25,6 +26,15 @@ h1 {
 h2 {
   .lato-Heavy;
   font-size: 2.1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }
 
 ul {
@@ -232,7 +242,7 @@ img {
 /*prices-layout
 =======================================*/ 
 .prices-layout {
-  padding: 0 0 50px;
+  padding: 50px 0;
 }
 
 /*filters-block
@@ -312,6 +322,12 @@ img {
     padding-top: 36px;
     text-align: left;
     border: 2px solid #eeeeee;
+    transition: all .4s ease;
+
+    &:hover {
+      box-shadow: 0 4px 25px rgba(0,0,0,.2);
+      border-color: @accent;
+    }
 
     @media screen and (max-width: @sm) {
       margin: 0 auto 30px;
@@ -380,6 +396,80 @@ img {
 /*layouts
 =======================================*/ 
 
+/*about
+=======================================*/ 
+.about {
+  padding: 60px 0;
+  background-color: #f8f8f8;
+  background: url("../i/about-bg.jpg") no-repeat top left;
+  background-size: cover;
+
+  &__content {
+    position: relative;
+
+    @media screen and (max-width: @md) {
+       margin-bottom: 40px;     
+    } 
+  }
+
+  &__text {
+    position: relative;
+    padding: 40px;
+    .minionProRegular;
+    font-size: 1.1rem;
+    text-align: left;
+    background: @white;
+    box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.15);
+    z-index: 20;
+  }
+
+  &__greenline {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 80%;
+    height: 90%;
+    border: 5px solid @accent;
+    z-index: 1;
+  }
+  
+
+  /*about__features
+  =======================================*/ 
+  .about__features {
+    &-item {
+      vertical-align: top;
+      margin-bottom: 20px;
+      padding: 20px 15px;
+      height: 184px;
+      background: #fff;
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+
+      h4 {
+        font-size: .8rem;
+      }
+    }
+
+    .img-wrap {
+      margin-bottom: 20px;
+    }
+
+    .icon {
+      font-size: 60px;
+      color: @accent;
+      transition: all .4s ease;
+
+      &:hover {
+        color: #dede11;
+      }
+    }
+  }
+}
+/*about
+=======================================*/ 
 
 
 
