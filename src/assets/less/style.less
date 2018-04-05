@@ -648,7 +648,8 @@ img {
 
 /*photo
 =======================================*/ 
-.photo{
+.photo-wrap{
+
   .slick-right,
   .slick-left {
     position: absolute;
@@ -660,10 +661,6 @@ img {
     border: none;
     cursor: pointer;
     transition: all .4s ease;
-
-    @media screen and (max-width: 790px) {
-       display: none!important;     
-    }    
 
     &:hover {
       color: @accent;

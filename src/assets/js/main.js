@@ -40,8 +40,8 @@ $(function () {
       asNavFor: '#js-slider-index',
       focusOnSelect: true,
       arrows: true,
-      prevArrow: $('.slick-left'),
-      nextArrow: $('.slick-right'),
+      prevArrow: $('#js-slider-index-small-wrap .slick-left'),
+      nextArrow: $('#js-slider-index-small-wrap .slick-right'),
       responsive: [
     {
       breakpoint: 1920,
@@ -70,8 +70,8 @@ $(function () {
 =======================================*/ 
 $('#js-photo').slick({
    arrows: true,
-   prevArrow: $('#js-photo .slick-left'),
-   nextArrow: $('#js-photo .slick-right'), 
+   prevArrow: $('#js-photo-wrap .slick-left'),
+   nextArrow: $('#js-photo-wrap .slick-right'), 
    responsive: [
     {
       breakpoint: 1920,
