@@ -102,6 +102,39 @@ $('#js-photo').slick({
     $("#js-hypothec .tabs__content").hide().eq($(this).index()).fadeIn()
   }).eq(0).addClass("active");
 
+  /*scroll to up
+  =======================================*/ 
+  var jsUp = $('#js-up');
+  jsUp.on('click', function(){
+    $('html, body').animate({
+      scrollTop: 0
+    }, 1500);
+  });
+
+  /*hide up button on scroll
+  =======================================*/ 
+  $(document).on('scroll', function(){
+    var documentScrollTop = $(this).scrollTop();
+    var doucmentHeight = $(document).height();
+
+    if(documentScrollTop > doucmentHeight / 3){
+      jsUp.fadeIn();
+    }else{
+      jsUp.fadeOut();
+    }
+  });
+
+  /*smooth scroll to site blocks from menu
+  =======================================*/ 
+  $('#js-menu a').on('click', function(){
+    var id = $(this).attr('href');
+    var idOffsetTop = $(id).offset().top;
+    
+    $('html, body').animate({
+      scrollTop: idOffsetTop
+    }, 1000);
+
+  });
 
 });
 
